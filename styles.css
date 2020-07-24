@@ -1,0 +1,113 @@
+
+
+.navbar-brand{
+  font-size: 36px;
+  font-weight: 600;
+}
+.nav-item{
+padding: 0 18px;
+
+}
+.nav-link{
+font-size:20px;
+color: #fff;
+}
+
+.top_container{
+
+  background-color: #DF3D39;
+  background-image: url(pattern.png);
+  background-size: 80px;
+  background-repeat: repeat;
+  padding: 8% 8%;
+
+}
+
+.top_description{
+font-size: 20px;
+line-height: normal;
+color: #B9B9B9;
+ padding-right: 150px;
+  padding-top: 15px;
+}
+p{
+  font-family: Helvetica;
+  font-size: 20px;
+}
+
+hr{
+ margin-right: 0px;
+width:60%;
+  height: 25px;
+  background-color:#E9E9E9;;
+}
+.top_heading{
+  color: #E9E9E9;
+  text-align: right;
+
+}
+h1{
+  font-family: Bebas Neue;
+  font-size: 80px;
+
+}
+.middle_container{
+  padding: 8% 8%;
+}
+.image1{
+   width:80%;
+  }
+.middle_details{
+  text-align: left;
+
+}
+.middle_para{
+  line-height: normal;
+  color: #B0B0B0;
+}
+.btn-modal{
+  background-color: #DF3D39;
+  color: #fff;
+}
+.bottom_container{
+  padding: 20px 100px;
+  background-color: #000000;
+  color: #fff;
+}
+
+.modal-body{
+
+  background-color:#DF3D39;
+  color:#fff;
+  padding: 10px 70px 100px;
+
+}
+
+.modal-header{
+  border-bottom: 0px;
+  background-color:#DF3D39;
+  color:#fff;
+}
+.form-control{
+  border-radius: 0;
+  height: 40px;
+}
+h2{
+  font-family: Bebas Neue;
+  font-size: 39px;
+}
+h4{
+font-family: Bebas Neue;
+}
+.btn{
+  border-radius: 0;
+  font-size: 22px;
+  font-weight: Helvetica;
+}
+.btn2{
+  color: #fff;
+padding:10px 40px;
+    background-color:#9B1F1B;
+    border-width: 0;
+    margin-right: 10px;
+}
