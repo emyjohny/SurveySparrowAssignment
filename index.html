@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tripwiz</title>
+  <!-- Font family -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <!-- Bootstrap and css -->
+  <link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+<script src="jscript.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+  <section id="title">
+    <div class="container-fluid">
+      <!-- Navbar -->
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="">TRIPWIZ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="">Experiences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Questions</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-danger">SIGN IN</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <div class="top_container row">
+        <div class="top_heading col-lg-6">
+          <h1>DISCOVER NEW ADVENTURES</h1>
+          <hr>
+        </div>
+
+        <div class="top_description col-lg-6 ">
+          <p>We offer you a totally flexible and personal service so you can experience Kerala and Tamil Nadu your way.Take a glimpse at the tours we offer - for you to get inspired!</p>
+          <p>All of our sample tours can be customized to suit your personal preferences. Or, you can request your own personal tour!</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <div class="container-fluid">
+    <div class="row middle_container">
+      <div class=" col-lg-6 ">
+        <img class="image1" src="image.png" alt="">
+      </div>
+      <div class="col-lg-6 middle_details">
+        <h2>HERE WE GO</h2>
+        <div class="middle_para">
+          <p>We'll design a complete itinerary for you.From suggesting our favourite places that we are sure you would love and the sights you shouldn't miss,we are at your service,throughout.We'll book your accommodation and transportation ,and are
+            happy to drive you anywhere you want. </p>
+        </div>
+
+        <button type="button" class="btn btn-danger btn-modal" id="modal_btn"data-toggle="modal" onclick="clr()" data-target="#exampleModal">
+          CUSTOMIZE MY TRIP
+        </button>
+</div>
+    </div>
+        <div class="modal fade" id="exampleModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+<div class="modal-body">
+  <form class="needs-validation" novalidate >
+      <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <h4>ENTER YOUR DETAILS</h4>
+                      <form id="myForm" >
+
+                      <input type="text" class="form-control" value="" placeholder="Name" ><br>
+                      <input id="email"type="email" class="form-control " value="" placeholder="E-mail" onblur="validateEmail(this);"><br>
+                      <input id="phonenumber" class="form-control" type="tel"  placeholder="Phone no" onblur="validateNumber(this);">
+                    </div>
+
+                    <div class="col-lg-6 des">
+                      <h4>SELECT YOUR DESTINATION</h4>
+                      <select id="state" name="state" class="form-control" placeholder="Select your state" onchange="populate(this.id,'district')">
+                       <option value=""></option>
+                        <option value="kerala">Kerala</option>
+                        <option value="tamilnadu">Tamil Nadu</option>
+
+                      </select><br><br>
+
+                      <select id="district" name="district" placeholder="Select your destination" class="form-control"></select><br>
+                      <button type="button" data-dismiss="modal"  class="btn2 " onsubmit="clear()">SUBMIT</button>
+                      <button type="button" data-dismiss="modal" class="btn2">CANCEL</button>
+</form>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+  </div>
+</form>
+
+  <div class="bottom_container">
+    <p>Copyright <i class="far fa-copyright"></i> 2010-2017 Tripwiz.</p>
+
+  </div>
+
+</body>
+
+</html>
